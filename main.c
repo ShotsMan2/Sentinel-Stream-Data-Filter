@@ -3,31 +3,35 @@
 
 int main()
 {
-     int sayi,i,sum,bas;
+    int sayi, i, sum, bas;
 
-    sum=0;
+    sum = 0;
 
+    for (i = 1; i < 1000; i++)
+    {
 
-    for(i=1;i<1000;i++){
+        bas = 0;
 
-        bas=0;
+        printf("%d. sayiyi girin", i);
+        scanf("%d", &sayi);
 
-        printf("%d. sayiyi girin",i);
-        scanf("%d",&sayi);
-
-        if(sayi==-1){
+        if (sayi == -1)
+        {
             break;
         }
-        else{
-            for(;sayi>0;sayi/=10){
+        else
+        {
+            for (; sayi > 0; sayi /= 10)
+            {
                 bas++;
             }
-            if(bas==2){
+            if (bas == 2)
+            {
                 sum++;
             }
         }
     }
-    printf("2 basamaklı sayi adedi: %d",sum);
+    printf("2 basamaklı sayi adedi: %d", sum);
 
     return 0;
 }
